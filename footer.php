@@ -13,4 +13,6 @@
     <h3>Este es el footer</h3>
 </div>
 
+<?php wp_footer(); ?>
+
 </footer>
