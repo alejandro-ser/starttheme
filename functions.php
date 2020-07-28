@@ -15,6 +15,7 @@ function starttheme_include() {
     require 'custom/sections.php';
     require 'custom/settings.php';
     require 'custom/controlls.php';
+    require 'inc/menu.php';
 }
 
 function starttheme_nav_menus() {
@@ -42,7 +43,12 @@ function starttheme_linked_scripts() {
     wp_enqueue_script('script');
 }
 
+function starttheme_customize_live() {
+    wp_enqueue_script('starttheme_customize_live', get_template_directory_uri().'/custom/theme-customize.js', array('jquery'), '1.0', true);
+}
+
 add_action('wp_enqueue_scripts', 'starttheme_linked_scripts');
+add_action('customize_preview_init', 'starttheme_customize_live');
 add_action('after_setup_theme', 'starttheme_setup');
 add_action('widgets_init', 'startttheme_register_sidebar');
 

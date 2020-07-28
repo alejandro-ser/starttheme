@@ -4,7 +4,7 @@
 
 <style>
 .footer_all {
-    background-color: red;
+    background: <?php echo get_theme_mod('starttheme_colors') ?>;
     padding: 20px;
 }
 </style>

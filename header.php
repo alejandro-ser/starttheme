@@ -13,6 +13,9 @@
         body{
             margin-top: 40px;
         }
+        header{
+            background: <?php echo get_theme_mod('starttheme_colors') ?>;
+        }
     </style>
     <?php wp_head();?>
 </head>
